@@ -70,3 +70,7 @@ class WebtoonDownloadOptions:
 
     retry_strategy: RetryStrategy | None = None
     proxy: str | None = None
+    @click.option(
+    "--cookies",
+    type=click.Path(exists=True, dir_okay=False),
+    help="Path to Netscape-format cookie file for authenticated access",
